@@ -22,7 +22,9 @@ docker ps -a
 ```
 
 #### สั่ง run container 
-> docker run -it -v {/path/to/your/project/directory/or/home/directory}:{docker/container/path/} -p 9012:9012 --name {desired_container_name(Optional)} {image_name} {Command}
+```
+docker run -it -v {/path/to/your/project/directory/or/home/directory}:{docker/container/path/} -p 9012:9012 --name {desired_container_name(Optional)} {image_name} {Command}
+```
 
 #### สั่ง start container ที่จบการทำงานไปแล้ว
 
