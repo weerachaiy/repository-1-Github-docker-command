@@ -14,7 +14,6 @@ RUN apt-get update \
 		jq \
 		numactl \
 && rm -rf /var/lib/apt/lists/*
-
 RUN apt-get update
 
 # ติดตั้ง python ที่เราต้องการ
