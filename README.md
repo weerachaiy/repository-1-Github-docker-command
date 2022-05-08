@@ -12,8 +12,8 @@ Example : docker rmi 29a462eea79c
 
 #### ทำการลบ image ทั้งหมดในเครื่องเรา
 ```
-Command : docker images | grep "search_pattern" | awk "{print $column_number}" | xargs sudo docker rmi
-Example : docker images | grep "none" | awk "{print $1}" | xargs -I{} docker rmi {}
+Command : docker images | grep "search_pattern" | cut -f1 -d" " | xargs -I{} docker rmi {}
+Example : docker images | grep "none" | cut -f1 -d" " | xargs -I{} docker rmi {}
 ```
 
 #### แสดงรายการ container ที่อยู่ในเครื่องเรา 
@@ -61,8 +61,8 @@ docker rm 29a462eea79c
 
 #### ทำการลบ container ทั้งหมดในเครื่องเรา
 ```
-Command : docker ps -a | grep "search_pattern" | awk "{print $column_number}" | xargs sudo docker rm
-Example : docker ps -a | grep "exited" | awk "{print $1}" | xargs -I{} docker rm {}
+Command : docker ps -a | grep "search_pattern" | cut -f1 -d" " | xargs -I{} docker rm {}
+Example : docker ps -a | grep "Exited" | cut -f1 -d" " | xargs -I{} docker rm {}
 ```
 
 สร้าง Dockerfile
@@ -156,17 +156,17 @@ Command : sudo docker network inspect <network_name>
 Example : sudo docker network inspect my_network
 ``` 
  
-#### To attach network to container :
+#### เชื่อมต่อ network เข้ากับ container
 ```
 Command : sudo docker network connect
 ```
 
-#### To detach network from container :
+#### ยกเลิก เชื่อมต่อ network เข้ากับ container
 ```
 Command : sudo docker network disconnect
 ```
 
-#### To list all docker networks in host machine ( Local System)
+#### ดูรายชื่อ network 
 ```
 Command : sudo docker network ls 
 ```
