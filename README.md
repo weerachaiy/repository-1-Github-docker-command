@@ -118,22 +118,22 @@ docker run -p 5000:5000 --name python python
 
 #### ทำการลบ container และ image ทั้งหมดในเครื่องเรา
 ```
-command : sudo docker rm $(sudo docker ps -a -q) && sudo docker rmi $(sudo docker images -q)
+command : docker rm $(sudo docker ps -a) && docker rmi $(sudo docker images -q)
 ```
 
 #### เข้าถึง shell ใน container 
 ```
-Command : sudo docker exec -it <container_name/container_id> bash
+Command : docker exec -it <container_name/container_id> bash
 ```
 
 #### เหมือนตำสั่ง top ใน Linux
 ```
-Command : sudo docker top <container_name/container_id>
+Command : docker top <container_name/container_id>
 ```
 
 #### ดูสถานะของ container  
 ```
-Command : sudo docker stats <container_name/container_id>
+Command : docker stats <container_name/container_id>
 ```
 
 
