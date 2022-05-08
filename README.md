@@ -72,7 +72,7 @@ Example : docker ps -a | grep "exited" | awk "{print $1}" | xargs sudo docker rm
 # เริ่มจาก FROM นำ image ต้องการ Ubuntu 18.04
 FROM ubuntu:18.04
 
-# กำหนดชื่อคนดูแลไฟล์ ``Dockerfile`` ด้วย MAINTAINER
+# กำหนดชื่อคนดูแลไฟล์ Dockerfile ด้วย MAINTAINER
 MAINTAINER weerachaiy
 
 # สั่ง RUN update Ubuntu และติดตั้ง tool ที่เราต้องใช้
