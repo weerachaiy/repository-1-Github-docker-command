@@ -136,38 +136,4 @@ Command : sudo docker top <container_name/container_id>
 Command : sudo docker stats <container_name/container_id>
 ```
 
-### Docker Networking
-
-#### สร้าง network ใน docker
-```
-Command : sudo docker network create <network_name> --driver(optional) <driver_name>
-Example : sudo docker network create my_network 
-```
-
-#### เชื่อมต่อ network เข้ากับ container
-```
-Command : sudo docker run -d --name <container_name> --network <network_name> <image_name>
-Example : sudo docker run -d --name nginx_container --network my_network nginx 
-```
-
-#### ดูรายละเอียดเกี่ยวกับ network 
-```
-Command : sudo docker network inspect <network_name>
-Example : sudo docker network inspect my_network
-``` 
- 
-#### เชื่อมต่อ network เข้ากับ container
-```
-Command : sudo docker network connect
-```
-
-#### ยกเลิก เชื่อมต่อ network เข้ากับ container
-```
-Command : sudo docker network disconnect
-```
-
-#### ดูรายชื่อ network 
-```
-Command : sudo docker network ls 
-```
 
