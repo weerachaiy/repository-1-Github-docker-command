@@ -1,9 +1,0 @@
-version: '3'
-services:
-    python:
-        build: python
-        container_name: python
-        ports:
-            - "80:80"
-        volumes:
-            - "./html/:/var/www/html/"
