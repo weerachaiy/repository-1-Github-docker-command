@@ -61,8 +61,8 @@ docker rm 29a462eea79c
 
 #### ทำการลบ container ทั้งหมดในเครื่องเรา
 ```
-Command : docker ps -a | grep "search_pattern" | cut -f1 -d" " | xargs -I{} docker rm {}
-Example : docker ps -a | grep "Exited" | cut -f1 -d" " | xargs -I{} docker rm {}
+Command : docker ps -a | grep "search_pattern" | awk '{print $1}' | xargs -I{} docker rm {}
+Example : docker ps -a | grep "Exited" | awk '{print $1}' | xargs -I{} docker rm {}
 ```
 
 สร้าง Dockerfile
