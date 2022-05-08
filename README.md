@@ -118,7 +118,7 @@ docker run -p 5000:5000 --name python python
 
 #### ทำการลบ container และ image ทั้งหมดในเครื่องเรา
 ```
-docker rm $(docker ps -a)
+docker rm $(docker ps -a -q)
 docker rmi $(docker images -q)
 ```
 
