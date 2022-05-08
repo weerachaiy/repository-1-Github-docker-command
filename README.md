@@ -12,8 +12,8 @@ Example : docker rmi 29a462eea79c
 
 #### ทำการลบ image ทั้งหมดในเครื่องเรา
 ```
-Command : docker images | grep "search_pattern" | awk "{print $1}" | xargs -I{} docker rmi {}
-Example : docker images | grep "none" | awk "{print $1}" | xargs -I{} docker rmi {}
+Command : docker images | grep "search_pattern" | awk '{print $1}' | xargs -I{} docker rmi {}
+Example : docker images | grep "none" | awk '{print $1}' | xargs -I{} docker rmi {}
 ```
 
 #### แสดงรายการ container ที่อยู่ในเครื่องเรา 
