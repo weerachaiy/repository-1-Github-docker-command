@@ -2,3 +2,5 @@ version: '3'
 services:
     python:
         build: .
+        ports:
+            - "4444:5000"
